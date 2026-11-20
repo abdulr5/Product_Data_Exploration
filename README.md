@@ -1,138 +1,65 @@
-📊 Power BI Data Import & Transformation
-From raw tables to a clean, analysis-ready data model
+# 📊 Power BI – Data Import, Transformation & Modelling
 
-Show Image Show Image Show Image Show Image
+### From raw data to structured, analysis-ready datasets using Power BI.
 
-</div>
-🎯 Project Overview
+## 🎯 Project Overview
 
-In this project I used Power Query Editor in Power BI to import, clean, transform, combine and model sales data across three tables:
+A hands-on Power BI project focused on importing, cleaning, transforming, combining and modelling data using **Power Query Editor** and **Power BI Data Model**.
 
-🗂️ Table
-🧾 List of Orders
-📦 Order Details
-🎯 Sales Target
-📑 Table of Contents
-#	Task	#	Task
-1️⃣	Data Import	6️⃣	Merging Data
-2️⃣	Row Limiting & Data Types	7️⃣	Missing & Duplicate Data
-3️⃣	Text Formatting	8️⃣	Sorting & Filtering
-4️⃣	Column Creation	9️⃣	Grouping & Aggregating
-5️⃣	Conditional Column	🔟	Data Modeling
-1. 📥 Data Import
+## ⚙️ Tasks Performed
 
-Loaded the source tables into Power Query Editor via Home → Transform data.
+| Area | Key Activities |
+|:--|:--|
+| 📥 Data Import | Imported Orders, Sales Target and Order Details tables |
+| 🔢 Data Types | Restricted Orders to 500 rows and updated date and decimal data types |
+| 🔤 Text Formatting | Converted Customer Names to Proper Case |
+| 🔗 Column Creation | Merged City and State into Location |
+| 📈 Custom Columns | Created Profit Margin and Profit Status |
+| 🔄 Data Merging | Joined List of Orders and Order Details using Order ID |
+| 🧹 Data Cleaning | Identified missing values and duplicate records |
+| 🔍 Sorting & Filtering | Sorted Order Date and filtered records by State |
+| 📊 Data Aggregation | Calculated Order Count, Average Profit, Total Amount and Monthly Target |
+| 🏗️ Data Modelling | Established relationships between Orders, Order Details and Sales Target |
 
-Data import
+## 📌 Key Transformations
 
-2. ✂️ Row Limiting & Data Types
+- **Profit Margin:** Profit / Amount
+- **Profit Status:**
+  - Profit below 0 → Loss
+  - Profit equal to 0 → Break-Even
+  - Profit above 0 → Profit
+- **Location:** City + State
+- **Orders Data:** Merged using Order ID
 
-🔢 Restricted the List of Orders table to the first 500 rows Home → Keep Rows → Keep Top Rows → 500
+## 📊 Aggregation Results
 
-powerquery
-= Table.FirstN(Source, 500)
+| Analysis | Output |
+|:--|:--|
+| Order Count | Count of Order ID |
+| Category Analysis | Average Profit by Category |
+| Sub-Category Analysis | Total Amount by Sub-Category |
+| Sales Target | Total Target by Month |
 
-Keep top 500 rows
+## 🛠️ Tools & Technologies
 
-📅 Set the Order Date column to the Date data type
+- Microsoft Power BI
+- Power Query Editor
+- Power Query M
+- Data Transformation
+- Data Modelling
+- Table Relationships
 
-Order Date data type
+## 💡 Skills Demonstrated
 
-💰 Changed the Amount and Target columns to Fixed Decimal Number
+Data Import · Data Cleaning · Data Transformation · Custom Columns · Conditional Logic · Data Aggregation · Data Modelling · Power Query
 
-Fixed decimal number
+## 🚀 Project Outcome
 
-3. 🔤 Text Formatting
+Gained practical experience in preparing structured datasets, applying business logic, combining multiple tables and establishing relationships for analytical reporting.
 
-✍️ Formatted Customer Name to proper case for consistent capitalization.
+## 👨‍💻 About Me
 
-Proper case
+**Abdul Rasheed**  
+Aspiring Data Analyst | Excel | Power BI | SQL
 
-4. 🧱 Column Creation
-
-📍 Location – merged the City and State columns in the format City, State
-
-<img src="images/06-location-column.png" alt="Location column" width="220">
-
-📈 Profit Margin – custom column calculated as Profit / Amount (shown as a percentage)
-
-powerquery
-= [Profit] / [Amount]
-<img src="images/07-profit-margin.png" alt="Profit Margin column" width="160">
-5. 🚦 Conditional Column
-
-Added a Profit Status column:
-
-Condition	Result
-Profit < 0	🔴 Loss
-Profit = 0	🟡 Break-Even
-Profit > 0	🟢 Profit
-<img src="images/08-profit-status.png" alt="Profit Status column" width="150">
-6. 🔗 Merging Data (Joins)
-
-Merged List of Orders and Order Details on Order ID and named the output table Orders Data.
-
-Merge queries
-
-7. 🧹 Handling Missing & Duplicate Data
-🔍 Identified missing values across all tables
-🛠️ Applied suitable strategies:
-♻️ Replacing missing values
-🗑️ Removing records
-📌 Retaining nulls with justification
-👯 Identified duplicate rows and handled them based on business logic
-
-Missing and duplicate data
-
-8. 🔃 Sorting and Filtering Data
-
-⬇️ Sorted Orders Data by Order Date in descending order
-
-Sort by Order Date
-
-🗺️ Filtered orders for a specific state (e.g., Tamil Nadu)
-
-Filter by state
-
-9. 🧮 Grouping and Aggregating Data
-
-Duplicated the Order Details table and calculated:
-
-🔢 Count of Order ID
-
-Count of Order ID
-
-📊 Average Profit by Category
-
-Average profit by category
-
-💵 Total Amount by Sub-Category
-
-Total amount by sub-category
-
-Duplicated the Sales Target table and aggregated the total Target by month of order date.
-
-Target by month
-
-10. 🕸️ Data Modeling
-🔗 Relationship	🔑 Key
-List of Orders ↔ Order Details	Order ID
-Order Details ↔ Sales Target	Category
-
-List of Orders ↔ Order Details
-
-Relationship: List of Orders and Order Details
-
-Order Details ↔ Sales Target
-
-Relationship: Order Details and Sales Target
-
-✅ Verified in Manage Relationships that both relationships are active and correctly defined.
-
-🧰 Skills Demonstrated
-⚙️ Power Query transformations
-🧬 Custom & conditional columns
-🔗 Merging queries (joins)
-🧼 Data cleaning (nulls & duplicates)
-🧮 Grouping & aggregation
-🕸️ Data modeling & relationships
+*Learning by building real-world data projects.*
